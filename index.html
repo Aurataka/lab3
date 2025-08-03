@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Evolution of Game Engines</title>
+  <meta name="description" content="Six simple snapshots that show how game engines grew from early tools to modern powerhouses.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root{
+      --bg:#000;
+      --card:#2b2b2b;
+      --ink:#fff;
+      --muted:#cbd5e1;
+      --accent:#2563eb;
+      --accent-weak:#1e3a8a;
+      --border:#3f3f46;
+      --line:#1f2937;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:"Segoe UI", Roboto, Arial, sans-serif;
+      line-height:1.65;
+      color:var(--ink);
+      background:var(--bg);
+    }
+
+    header, footer{
+      background:var(--card);
+      border-top:4px solid var(--accent);
+      border-bottom:4px solid var(--accent);
+      padding:1rem;
+    }
+    header h1{ margin:0 0 .25rem; }
+    header p{ margin:.25rem 0 0; color:var(--muted); }
+
+    nav{
+      position:sticky; top:0; z-index:10;
+      background:var(--card);
+      border-bottom:1px solid var(--line);
+    }
+    nav ul{
+      list-style:none; margin:0; padding:.5rem 1rem;
+      display:flex; flex-wrap:wrap; gap:1rem;
+    }
+    nav a{
+      text-decoration:none; color:var(--accent); font-weight:700;
+      padding:.25rem .5rem; border-radius:.5rem;
+    }
+    nav a:hover, nav a:focus{ background:var(--accent-weak); text-decoration:underline; }
+
+    main{ max-width:960px; margin:0 auto; padding:1rem; }
+
+    section{
+      background:var(--card);
+      margin:1rem 0; padding:1.25rem;
+      border:2px solid var(--border);
+      border-left:10px solid var(--accent);
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,.4);
+    }
+    h2{ margin:0 0 .75rem; font-size:1.35rem; line-height:1.3; }
+
+    img{ max-width:100%; height:auto; border:1px solid #6b7280; border-radius:8px; }
+    .thumb{ width:360px; }
+    figure{ margin:0 0 .75rem; }
+    figcaption{ font-size:.9rem; color:var(--muted); margin-top:.35rem; }
+
+    .float-right{ float:right; margin:0 0 .75rem 1rem; max-width:45%; }
+    .float-right .thumb{ width:100%; }
+    .clearfix::after{ content:""; display:block; clear:both; }
+
+    .center{ text-align:center; }
+    .center img{ display:block; margin-inline:auto; }
+
+    .facts{ margin:.5rem 0 0 1.25rem; color:var(--muted); }
+    .facts li{ margin:.15rem 0; }
+
+    a{ color:var(--accent); }
+    a:focus{ outline:2px dashed var(--accent); outline-offset:2px; }
+    footer p{ margin:0; font-size:.9rem; color:var(--muted); }
+
+    section + section{ border-top-color:var(--line); }
+
+    @media (max-width:700px){
+      .float-right{ float:none; max-width:100%; margin:0 0 .75rem 0; }
+      .thumb{ width:100%; }
+    }
+  </style>
+</head>
+<body id="top">
+
+<header>
+  <h1>Evolution of Game Engines</h1>
+  <p>Six snapshots that shaped how games are built.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#id-tech">id Tech</a></li>
+    <li><a href="#unreal">Unreal</a></li>
+    <li><a href="#source">Source</a></li>
+    <li><a href="#cryengine">CryEngine</a></li>
+    <li><a href="#unity">Unity</a></li>
+    <li><a href="#ue5">UE5</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- 1 -->
+  <section id="id-tech" class="clearfix">
+    <h2>1) id Tech era - fast 3D toolchains (1993 to 1997)</h2>
+    <figure class="float-right">
+      <a href="https://www.youtube.com/watch?v=Q4GiCg_m8wA" target="_blank" rel="noopener" title="Watch DOOM 1993 gameplay on YouTube">
+        <img src="idtech-editor.jpg" class="thumb" alt="Classic level editor used with early id Tech engines">
+      </a>
+      <figcaption>
+        Image credit:
+        <a href="https://en.namu.wiki/w/id%20Tech%20%EC%97%94%EC%A7%84" target="_blank" rel="noopener">Source</a>
+      </figcaption>
+    </figure>
+    <p>These tools helped teams make early 3D shooters quickly. Builders used simple shapes, set up lights, and pressed a few buttons to turn their map into a playable level.</p>
+    <p>The big win was speed. People could change a room, hit build, and test it right away, which also made fan made levels take off.</p>
+    <ul class="facts">
+      <li>Simple editors anyone could learn</li>
+      <li>Quick build and test loop</li>
+      <li>Easy to share custom levels</li>
+    </ul>
+    <p><a href="#top">Back to top</a></p>
+  </section>
+
+  <!-- 2 -->
+  <section id="unreal">
+    <h2>2) Unreal Engine + UnrealEd - integrated tooling (1998)</h2>
+    <figure class="center">
+      <a href="https://www.youtube.com/watch?v=JfDBNQs0P6A" target="_blank" rel="noopener" title="Watch Unreal Tournament 1999 gameplay on YouTube">
+        <img src="unreal-editor2.jpg" class="thumb" alt="UnrealEd showing viewport and content browser">
+      </a>
+      <figcaption>
+        Image credit:
+        <a href="https://lenain.info/building-unreal-like-it-is-19xx-again/" target="_blank" rel="noopener">Source</a>
+      </figcaption>
+    </figure>
+    <p>Unreal put almost everything in one window. You could place objects, write simple scripts, add sounds and textures, and preview the result without hopping between different apps.</p>
+    <p>This made teams faster and let small groups make bigger, moodier worlds than before.</p>
+    <ul class="facts">
+      <li>All your tools in one place</li>
+      <li>Live preview while you work</li>
+      <li>Good for small teams making big levels</li>
+    </ul>
+    <p><a href="#top">Back to top</a></p>
+  </section>
+
+  <!-- 3 -->
+  <section id="source">
+    <h2>3) Source + Hammer - physics and mod culture (2004)</h2>
+    <figure class="center">
+      <a href="https://www.youtube.com/watch?v=8VguiquVHBQ" target="_blank" rel="noopener" title="Watch Half-Life 2 gameplay on YouTube">
+        <img src="hammer-editor.jpg" class="thumb" alt="Hammer editor for the Source engine">
+      </a>
+      <figcaption>
+        Image credit:
+        <a href="https://developer.valvesoftware.com/wiki/Valve_Hammer_Editor" target="_blank" rel="noopener">Source</a>
+      </figcaption>
+    </figure>
+    <p>Source added easy to use materials and built in physics, so objects could move, fall, and react in believable ways. That made puzzles and world details feel lively.</p>
+    <p>Great guides and a free tool kit encouraged tons of custom maps and total conversions, which kept games popular for years.</p>
+    <ul class="facts">
+      <li>Objects that react and move naturally</li>
+      <li>Flexible look for walls, floors, and props</li>
+      <li>Huge community of creators</li>
+    </ul>
+    <p><a href="#top">Back to top</a></p>
+  </section>
+
+  <!-- 4 -->
+  <section id="cryengine">
+    <h2>4) CryEngine Sandbox - real time world editing (2004 to 2007)</h2>
+    <figure class="center">
+      <a href="https://www.youtube.com/watch?v=OQ0WOf_mCgI" target="_blank" rel="noopener" title="Watch Crysis 2007 gameplay on YouTube">
+        <img src="cryengine-sandbox2.jpg" class="thumb" alt="CryEngine Sandbox with terrain and lighting tools">
+      </a>
+      <figcaption>
+        Image credit:
+        <a href="https://www.youtube.com/watch?v=_tklcEounw4" target="_blank" rel="noopener">Source</a>
+      </figcaption>
+    </figure>
+    <p>Sandbox let you shape the land, drop trees, and change the time of day while watching the scene update as you worked. It felt like painting a world instead of filling in forms.</p>
+    <p>Because you could see the final look right away, teams made large outdoor levels that looked fresh and natural.</p>
+    <ul class="facts">
+      <li>Edit the world and see changes instantly</li>
+      <li>Easy controls for sky, sun, and atmosphere</li>
+      <li>Good for big outdoor maps</li>
+    </ul>
+    <p><a href="#top">Back to top</a></p>
+  </section>
+
+  <!-- 5 -->
+  <section id="unity">
+    <h2>5) Unity - multi platform publishing for small teams (mid 2000s to 2010s)</h2>
+    <figure class="center">
+      <a href="https://www.youtube.com/watch?v=76wIRNsDPPw" target="_blank" rel="noopener" title="Watch Hollow Knight gameplay on YouTube">
+        <img src="unity-editor.jpg" class="thumb" alt="Unity Editor with scene and inspector panels">
+      </a>
+      <figcaption>
+        Image credit:
+        <a href="https://discussions.unity.com/t/the-unity-editor-scene-experience-is-still-completely-ridiculous-in-2022-lts-and-defies-any-logic/919538" target="_blank" rel="noopener">Source</a>
+      </figcaption>
+    </figure>
+    <p>Unity made it simple to build a game piece by piece. You drop parts on an object and set its values in the Inspector panel, almost like filling out a form.</p>
+    <p>The standout feature was reach. With one project you could publish to computers, phones, and more, which opened the door for lots of small indie teams.</p>
+    <ul class="facts">
+      <li>Plug in parts and tune them in the Inspector</li>
+      <li>Clear, readable scripts</li>
+      <li>One project can target many devices</li>
+    </ul>
+    <p><a href="#top">Back to top</a></p>
+  </section>
+
+  <!-- 6 -->
+  <section id="ue5">
+    <h2>6) Unreal Engine 5 - Nanite and Lumen (2021 to now)</h2>
+    <figure class="center">
+      <a href="https://www.youtube.com/watch?v=WU0gvPcc3jQ" target="_blank" rel="noopener" title="Watch The Matrix Awakens UE5 experience on YouTube">
+        <img src="ue5-editor.jpg" class="thumb" alt="Unreal Engine 5 editor with Nanite and Lumen demo content">
+      </a>
+      <figcaption>
+        Image credit:
+        <a href="https://www.linkedin.com/pulse/upcoming-features-unreal-engine-51-mika-mike-laaksonen/" target="_blank" rel="noopener">Source</a>
+      </figcaption>
+    </figure>
+    <p>UE5 lets artists drop in very detailed models and get rich lighting without a long setup. The engine handles the heavy lifting so scenes look sharp and bright right away.</p>
+    <p>Bigger projects are easier to manage too, thanks to new tools for huge maps, physics, and sound. It brings movie level polish closer to everyday game teams.</p>
+    <ul class="facts">
+      <li>High detail models that still run smoothly</li>
+      <li>Lighting that feels natural in motion</li>
+      <li>Tools that help organize very large worlds</li>
+    </ul>
+    <p><a href="#top">Back to top</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Gwyn Severson for BATECH 189</p>
+</footer>
+
+</body>
+</html>
